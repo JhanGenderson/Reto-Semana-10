@@ -9,7 +9,8 @@ export default function ListaPlatosView() {
         try {
             // Ejecuto la funcion que me devuelve los platos
             const platosObtenidos = await obtenerPlatos()
-            
+            // Añado al estado
+            setPlatos(platosObtenidos)
         } catch (error) {
             console.log(error)
         }

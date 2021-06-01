@@ -4,10 +4,10 @@ const URL="https://60b2f448e0275c0017bfc898.mockapi.io/Productos"
 
 const obtenerPlatos = async()=>{
     try {
-        let respuesta = await axios.get(URL)
-        console.log(respuesta)
+        let {data} = await axios.get(URL)
+        return data
     } catch (error) {
-        console.log(error)
+        throw error
     }
 }
 
