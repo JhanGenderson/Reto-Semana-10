@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const URL = "https://60b2f448e0275c0017bfc898.mockapi.io/Productos";
+const URL = "https://60b2f448e0275c0017bfc898.mockapi.io/Categoria"
 
-const obtenerPlato = async()=>{
+const obtenerCategoria = async()=>{
     try {
         let {data} = await axios.get(URL)
         return data
@@ -11,7 +11,7 @@ const obtenerPlato = async()=>{
     }
 }
 
-const obtenerPlatosById= async(id)=>{
+const getCategoriaId = async(id)=>{
     try {
         let {data} = await axios.get(`${URL}/${id}`)
         return data
@@ -21,5 +21,5 @@ const obtenerPlatosById= async(id)=>{
 }
 
 export {
-    obtenerPlato, obtenerPlatosById
+    obtenerCategoria, getCategoriaId
 }

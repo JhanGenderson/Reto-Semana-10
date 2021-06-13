@@ -1,10 +1,18 @@
 import React from 'react'
-import ListaPlatosView from './Views/ListaPlatosView'
+import {Switch, BrowserRouter as Router} from 'react-router-dom'
+import NavTop from './Components/NavTop'
+import Routes from './Routes'
+import CarritoContextProvider from './Context/carrito'
+
 export default function App() {
   return (
-    <div>
-      <ListaPlatosView/>
-    </div>
+    <Router>
+      <CarritoContextProvider>
+         <NavTop/>
+      <Switch>
+        <Routes/>
+      </Switch>
+      </CarritoContextProvider>
+    </Router>
   )
 }
-
